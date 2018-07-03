@@ -1,0 +1,14 @@
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\x86\Release\rzkclock_ws.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\x86\Release\rzkclock_ws.XmlSerializers.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\x86\Release\rzkclock_ws.pdb
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\x86\Release\Interop.zkemkeeper.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\x86\Release\Interop.SAPFunctionsOCX.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\x86\Release\Interop.SAPLogonCtrl.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\x86\Release\Interop.SAPTableFactoryCtrl.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\x86\Release\Interop.SAPFunctionsOCX.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\x86\Release\Interop.SAPLogonCtrl.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\x86\Release\Interop.SAPTableFactoryCtrl.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\x86\Release\rzkclock_ws.csproj.ResolveComReference.cache
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\x86\Release\rzkclock_ws.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\x86\Release\rzkclock_ws.pdb
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\x86\Release\rzkclock_ws.XmlSerializers.dll

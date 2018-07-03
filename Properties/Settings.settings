@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="rzkclock_ws.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SAP_WS_QAS_ZK" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.22:8002/sap/bc/srt/rfc/sap/zk_webservices_reloj/700/zk_webservices_reloj_sn/zk_webservices_reloj_bn</Value>
+    </Setting>
+    <Setting Name="SAP_WS_PRD_ZK" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.23:8003/sap/bc/srt/rfc/sap/zk_webservices_reloj/900/zk_webservices_reloj_sn/zk_webservices_reloj_bn</Value>
+    </Setting>
+    <Setting Name="SAP_WS_DEV_ZK" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.23.5.11:8000/sap/bc/srt/rfc/sap/zk_webservices_reloj/200/zk_webservices_reloj_sn/zk_webservices_reloj_bn</Value>
+    </Setting>
+    <Setting Name="user_SAP_WS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">scsleandro</Value>
+    </Setting>
+    <Setting Name="pass_SAP_WS" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">FloridaS2016</Value>
+    </Setting>
+    <Setting Name="ambiente_ZK" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DEV</Value>
+    </Setting>
+    <Setting Name="sistema_ZK" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

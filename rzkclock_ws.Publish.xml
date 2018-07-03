@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\Marvin Quesada\Desktop\PubZK-Florida" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Interop.SAPLogonCtrl.dll" publishTime="08/18/2016 11:41:21" />
+    <file relUrl="wsMarcas.asmx" publishTime="05/20/2016 12:18:03" />
+    <file relUrl="Web.config" publishTime="02/16/2017 13:25:58" />
+    <file relUrl="bin/Interop.SAPFunctionsOCX.dll" publishTime="08/18/2016 11:41:20" />
+    <file relUrl="bin/rzkclock_ws.dll" publishTime="04/19/2017 11:51:20" />
+    <file relUrl="bin/Interop.zkemkeeper.dll" publishTime="12/21/2016 16:07:01" />
+    <file relUrl="bin/Interop.SAPTableFactoryCtrl.dll" publishTime="08/18/2016 11:41:21" />
+    <file relUrl="bin/rzkclock_ws.pdb" publishTime="04/19/2017 11:51:20" />
+  </publishProfile>
+</publishData>

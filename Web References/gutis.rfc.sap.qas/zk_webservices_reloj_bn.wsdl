@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:n1="urn:sap-com:document:sap:rfc:functions" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl" />
+  </wsdl:documentation>
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="BN__ZK_WEBSERVICES_RELOJ_BN">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BN__ZK_WEBSERVICES_RELOJ_BN_soap12">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+      </wsp:All>
+      <wsp:All>
+        <sapattahnd:Enabled xmlns:sapattahnd="http://www.sap.com/710/features/attachment/">false</sapattahnd:Enabled>
+        <saptrnbnd:OptimizedXMLTransfer uri="http://xml.sap.com/2006/11/esi/esp/binxml" xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" wsp:Optional="true" />
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="IF__ZK_WEBSERVICES_RELOJ">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+          <sapsession:enableSession>false</sapsession:enableSession>
+        </sapsession:Session>
+        <sapcentraladmin:CentralAdministration xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/" wsp:Optional="true">
+          <sapcentraladmin:BusinessApplicationID>005056854EF81ED5A5A59C3A3339E0D2</sapcentraladmin:BusinessApplicationID>
+        </sapcentraladmin:CentralAdministration>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkGuardarHuella">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkEnviarHuellas">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkDistrEmpleados">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkWs">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkGuardarHuellas">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkListaRelojes">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkMarcasEmpleados">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkSincTiempo">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="OP__ZkPing">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+        <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+        <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+        <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <xsd:simpleType name="char1">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char100">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="100" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char15">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="15" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char17">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="17" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char2">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char20">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="20" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char40">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="40" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="char80">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="80" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="clnt3">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date10">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10" />
+          <xsd:pattern value="\d\d\d\d-\d\d-\d\d" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="longchar4000">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="4000" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric16">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="16" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="numeric8">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8" />
+          <xsd:pattern value="\d*" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string">
+        <xsd:restriction base="xsd:string" />
+      </xsd:simpleType>
+      <xsd:simpleType name="time">
+        <xsd:restriction base="xsd:time">
+          <xsd:pattern value="[0-9]{2}:[0-9]{2}:[0-9]{2}" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+    <xsd:schema xmlns:n0="urn:sap-com:document:sap:rfc:functions" attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style">
+      <xsd:import namespace="urn:sap-com:document:sap:rfc:functions" />
+      <xsd:complexType name="ZksStatusEmple">
+        <xsd:sequence>
+          <xsd:element name="Ip" type="n0:char15" />
+          <xsd:element name="Bdegr" type="n0:char3" />
+          <xsd:element name="Pernr" type="n0:numeric8" />
+          <xsd:element name="Cname" type="n0:char80" />
+          <xsd:element name="Enable" type="n0:char1" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZksHuellas">
+        <xsd:sequence>
+          <xsd:element name="Pernr" type="n0:numeric8" />
+          <xsd:element name="Dedo" type="n0:char2" />
+          <xsd:element name="Dtint2" type="xsd:short" />
+          <xsd:element name="Huella" type="n0:longchar4000" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZktReloj">
+        <xsd:sequence>
+          <xsd:element name="Mandt" type="n0:clnt3" />
+          <xsd:element name="Bdegr" type="n0:char3" />
+          <xsd:element name="Ip" type="n0:char15" />
+          <xsd:element name="Land" type="n0:char3" />
+          <xsd:element name="Estado" type="n0:char1" />
+          <xsd:element name="Info" type="n0:char20" />
+          <xsd:element name="Ubicacion" type="n0:char40" />
+          <xsd:element name="Id" type="n0:char10" />
+          <xsd:element name="Macadd" type="n0:char17" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZksMarcas">
+        <xsd:sequence>
+          <xsd:element name="Ip" type="n0:char15" />
+          <xsd:element name="Pernr" type="n0:numeric8" />
+          <xsd:element name="Modo" type="n0:char1" />
+          <xsd:element name="Tipo" type="n0:char1" />
+          <xsd:element name="Fecha" type="n0:date10" />
+          <xsd:element name="Hora" type="n0:time" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZksStatusEmple">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZksStatusEmple" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZksHuellas">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZksHuellas" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZktReloj">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZktReloj" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TableOfZksMarcas">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:ZksMarcas" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ZkDistrEmpleados">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Empleado" type="n0:numeric8" />
+            <xsd:element minOccurs="0" name="Info" type="tns:TableOfZksStatusEmple" />
+            <xsd:element minOccurs="0" name="Reloj" type="n0:char3" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkDistrEmpleadosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Info" type="tns:TableOfZksStatusEmple" />
+            <xsd:element name="Return" type="n0:char100" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkEnviarHuellas">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Empleado" type="n0:numeric8" />
+            <xsd:element minOccurs="0" name="Huellas" type="tns:TableOfZksHuellas" />
+            <xsd:element minOccurs="0" name="Reloj" type="n0:char3" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkEnviarHuellasResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Huellas" type="tns:TableOfZksHuellas" />
+            <xsd:element name="Ip" type="n0:char15" />
+            <xsd:element name="Return" type="n0:char100" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkGuardarHuella">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Dedo" type="n0:char2" />
+            <xsd:element name="Empleado" type="n0:numeric8" />
+            <xsd:element name="Huella" type="n0:longchar4000" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkGuardarHuellaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Return" type="n0:char100" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkGuardarHuellas">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Huellas" type="tns:TableOfZksHuellas" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkGuardarHuellasResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Huellas" type="tns:TableOfZksHuellas" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkListaRelojes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Relojes" type="tns:TableOfZktReloj" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkListaRelojesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Relojes" type="tns:TableOfZktReloj" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkMarcasEmpleados">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Marcas" type="tns:TableOfZksMarcas" />
+            <xsd:element minOccurs="0" name="SoloPost" type="n0:char1" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkMarcasEmpleadosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="IdocNum" type="n0:numeric16" />
+            <xsd:element minOccurs="0" name="Marcas" type="tns:TableOfZksMarcas" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkPing">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="Estado" type="n0:char1" />
+            <xsd:element minOccurs="0" name="Ip" type="n0:char15" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkPingResponse">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkSincTiempo">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkSincTiempoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Datum" type="n0:date10" />
+            <xsd:element name="Uzeit" type="n0:time" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkWs">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Codigo" type="n0:char2" />
+            <xsd:element name="Comando" type="n0:char100" />
+            <xsd:element name="Url" type="n0:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZkWsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Resultado" type="n0:char10" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ZkDistrEmpleados">
+    <wsdl:part name="parameters" element="tns:ZkDistrEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="ZkDistrEmpleadosResponse">
+    <wsdl:part name="parameter" element="tns:ZkDistrEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZkEnviarHuellas">
+    <wsdl:part name="parameters" element="tns:ZkEnviarHuellas" />
+  </wsdl:message>
+  <wsdl:message name="ZkEnviarHuellasResponse">
+    <wsdl:part name="parameter" element="tns:ZkEnviarHuellasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZkGuardarHuella">
+    <wsdl:part name="parameters" element="tns:ZkGuardarHuella" />
+  </wsdl:message>
+  <wsdl:message name="ZkGuardarHuellaResponse">
+    <wsdl:part name="parameter" element="tns:ZkGuardarHuellaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZkGuardarHuellas">
+    <wsdl:part name="parameters" element="tns:ZkGuardarHuellas" />
+  </wsdl:message>
+  <wsdl:message name="ZkGuardarHuellasResponse">
+    <wsdl:part name="parameter" element="tns:ZkGuardarHuellasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZkListaRelojes">
+    <wsdl:part name="parameters" element="tns:ZkListaRelojes" />
+  </wsdl:message>
+  <wsdl:message name="ZkListaRelojesResponse">
+    <wsdl:part name="parameter" element="tns:ZkListaRelojesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZkMarcasEmpleados">
+    <wsdl:part name="parameters" element="tns:ZkMarcasEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="ZkMarcasEmpleadosResponse">
+    <wsdl:part name="parameter" element="tns:ZkMarcasEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZkPing">
+    <wsdl:part name="parameters" element="tns:ZkPing" />
+  </wsdl:message>
+  <wsdl:message name="ZkPingResponse">
+    <wsdl:part name="parameter" element="tns:ZkPingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZkSincTiempo">
+    <wsdl:part name="parameters" element="tns:ZkSincTiempo" />
+  </wsdl:message>
+  <wsdl:message name="ZkSincTiempoResponse">
+    <wsdl:part name="parameter" element="tns:ZkSincTiempoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZkWs">
+    <wsdl:part name="parameters" element="tns:ZkWs" />
+  </wsdl:message>
+  <wsdl:message name="ZkWsResponse">
+    <wsdl:part name="parameter" element="tns:ZkWsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ZK_WEBSERVICES_RELOJ">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#IF__ZK_WEBSERVICES_RELOJ" />
+    </wsp:Policy>
+    <wsdl:operation name="ZkDistrEmpleados">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkDistrEmpleados" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkDistrEmpleados" />
+      <wsdl:output message="tns:ZkDistrEmpleadosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZkEnviarHuellas">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkEnviarHuellas" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkEnviarHuellas" />
+      <wsdl:output message="tns:ZkEnviarHuellasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZkGuardarHuella">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkGuardarHuella" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkGuardarHuella" />
+      <wsdl:output message="tns:ZkGuardarHuellaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZkGuardarHuellas">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkGuardarHuellas" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkGuardarHuellas" />
+      <wsdl:output message="tns:ZkGuardarHuellasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZkListaRelojes">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkListaRelojes" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkListaRelojes" />
+      <wsdl:output message="tns:ZkListaRelojesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZkMarcasEmpleados">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkMarcasEmpleados" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkMarcasEmpleados" />
+      <wsdl:output message="tns:ZkMarcasEmpleadosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZkPing">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkPing" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkPing" />
+      <wsdl:output message="tns:ZkPingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZkSincTiempo">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkSincTiempo" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkSincTiempo" />
+      <wsdl:output message="tns:ZkSincTiempoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ZkWs">
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP__ZkWs" />
+      </wsp:Policy>
+      <wsdl:input message="tns:ZkWs" />
+      <wsdl:output message="tns:ZkWsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZK_WEBSERVICES_RELOJ_BN" type="tns:ZK_WEBSERVICES_RELOJ">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZK_WEBSERVICES_RELOJ_BN" />
+    </wsp:Policy>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZkDistrEmpleados">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkDistrEmpleadosRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkEnviarHuellas">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkEnviarHuellasRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkGuardarHuella">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkGuardarHuellaRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkGuardarHuellas">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkGuardarHuellasRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkListaRelojes">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkListaRelojesRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkMarcasEmpleados">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkMarcasEmpleadosRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkPing">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkPingRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkSincTiempo">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkSincTiempoRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkWs">
+      <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkWsRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZK_WEBSERVICES_RELOJ_BN_soap12" type="tns:ZK_WEBSERVICES_RELOJ">
+    <wsp:Policy>
+      <wsp:PolicyReference URI="#BN__ZK_WEBSERVICES_RELOJ_BN_soap12" />
+    </wsp:Policy>
+    <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZkDistrEmpleados">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkDistrEmpleadosRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkEnviarHuellas">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkEnviarHuellasRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkGuardarHuella">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkGuardarHuellaRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkGuardarHuellas">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkGuardarHuellasRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkListaRelojes">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkListaRelojesRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkMarcasEmpleados">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkMarcasEmpleadosRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkPing">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkPingRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkSincTiempo">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkSincTiempoRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZkWs">
+      <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZK_WEBSERVICES_RELOJ:ZkWsRequest" style="document" />
+      <wsdl:input>
+        <wsoap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsoap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZK_WEBSERVICES_RELOJ_SN">
+    <wsdl:port name="ZK_WEBSERVICES_RELOJ_BN" binding="tns:ZK_WEBSERVICES_RELOJ_BN">
+      <soap:address location="http://crs-sapqlt01.gcorp.gutis.com:8002/sap/bc/srt/rfc/sap/zk_webservices_reloj/700/zk_webservices_reloj_sn/zk_webservices_reloj_bn" />
+    </wsdl:port>
+    <wsdl:port name="ZK_WEBSERVICES_RELOJ_BN_soap12" binding="tns:ZK_WEBSERVICES_RELOJ_BN_soap12">
+      <wsoap12:address location="http://crs-sapqlt01.gcorp.gutis.com:8002/sap/bc/srt/rfc/sap/zk_webservices_reloj/700/zk_webservices_reloj_sn/zk_webservices_reloj_bn" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

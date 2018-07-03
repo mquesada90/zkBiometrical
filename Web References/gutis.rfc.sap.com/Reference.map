@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://192.168.0.20:8001/sap/bc/srt/wsdl/flv_10002A111AD1/srvc_url/sap/bc/srt/rfc/sap/zk_webservices_reloj/400/zk_webservices_reloj_sn/zk_webservices_reloj_bn?sap-client=400" filename="zk_webservices_reloj_bn.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

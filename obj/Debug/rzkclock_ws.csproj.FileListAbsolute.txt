@@ -1,0 +1,23 @@
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\rzkclock_ws.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\rzkclock_ws.pdb
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\Interop.zkemkeeper.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\Interop.SAPFunctionsOCX.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\Interop.SAPLogonCtrl.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\bin\Interop.SAPTableFactoryCtrl.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\Debug\Interop.SAPFunctionsOCX.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\Debug\Interop.SAPLogonCtrl.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\Debug\Interop.SAPTableFactoryCtrl.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\Debug\rzkclock_ws.csproj.ResolveComReference.cache
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\Debug\rzkclock_ws.dll
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\Debug\rzkclock_ws.pdb
+C:\Users\mparedes\Desktop\ZK-FF\Backup1\obj\Debug\rzkclock_ws.csprojResolveAssemblyReference.cache
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\bin\rzkclock_ws.dll
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\bin\rzkclock_ws.pdb
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\bin\Interop.SAPFunctionsOCX.dll
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\bin\Interop.SAPLogonCtrl.dll
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\bin\Interop.SAPTableFactoryCtrl.dll
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\bin\libzkfpcsharp.dll
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\obj\Debug\rzkclock_ws.csproj.ResolveComReference.cache
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\obj\Debug\rzkclock_ws.dll
+C:\Users\Marvin Quesada\Desktop\ZK Florida DEH\obj\Debug\rzkclock_ws.pdb
